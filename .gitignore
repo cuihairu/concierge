@@ -1,0 +1,32 @@
+# Go
+gateway/bin/
+gateway/dist/
+*.exe
+*.test
+*.out
+
+# 依赖与构建
+node_modules/
+dist/
+build/
+
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+*.csproj
+*.sln
+
+# Unreal
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
