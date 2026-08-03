@@ -30,3 +30,5 @@ DerivedDataCache/
 .idea/
 .vscode/
 .DS_Store
+docs/.vitepress/dist
+node_modules/
