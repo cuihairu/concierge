@@ -41,6 +41,9 @@ sdks/
   unity/    Unity SDK（C#，UPM 包）
   ue/       Unreal Engine SDK（C++ 插件）
   cocos/    Cocos Creator SDK（TypeScript）
+  miniprogram/  微信小程序 SDK（JavaScript）
+  laybox/    Layabox SDK（TypeScript/JavaScript）
+  godot/     Godot SDK（GDScript/C#）
 docs/       架构、路线图、API 契约
 ```
 

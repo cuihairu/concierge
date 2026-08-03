@@ -33,7 +33,7 @@
 5. **能力编排而非复制。** 公告/客服/FAQ 只做玩家侧投影（只读列表、提单、订阅），数据事实留在 herald/croupier；assistant M3 复用 croupier faq 知识库做检索增强，不另建知识库。
 6. **payments 渠道抽象先行。** M4 才实现，但接口形状 M1 就冻结：`Order / Channel / Callback / Reconcile` 四概念，避免后续返工。
 
-## SDK 结构（三端同构）
+## SDK 结构（多端同构）
 
 ```text
 ConciergeClient
@@ -44,9 +44,9 @@ ConciergeClient
   .Payments    createOrder / queryOrder (M4)
 ```
 
-- 每端 = 平台无关 core（DTO、状态机、token 存储、重试）+ 平台 binding（Unity UPM / UE 插件 / Cocos TS）。
-- 公共 DTO 以 `docs/api/` 契约为唯一事实源，三端各自生成或手写对齐，禁止各自发明字段。
-- token 存储走平台安全存储（Unity PlayerPrefs 加密 / UE 平台凭证 / Cocos localStorage 隔离）。
+- 每端 = 平台无关 core（DTO、状态机、token 存储、重试）+ 平台 binding（Unity UPM / UE 插件 / Cocos TS / 微信小程序 / Layabox / Godot）。
+- 公共 DTO 以 `docs/api/` 契约为唯一事实源，多端各自生成或手写对齐，禁止各自发明字段。
+- token 存储走平台安全存储（Unity PlayerPrefs 加密 / UE 平台凭证 / Cocos localStorage 隔离 / 微信小程序 storage / Layabox/Godot 平台存储）。
 
 ## 安全边界
 

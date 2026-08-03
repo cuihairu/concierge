@@ -8,7 +8,7 @@
 
 - gateway：`accounts` / `sessions` 模块，邮箱+密码与游客（设备）两种登录方式，access/refresh token，吊销，基础限流。
 - 数据表：`accounts`、`account_credentials`、`sessions`、`devices`（GORM + AutoMigrate，同生态约定）。
-- Unity SDK 先行：`ConciergeClient.Auth` 全流程 + token 安全存储 + 自动 refresh。
+- Unity SDK 先行；微信小程序、Layabox、Godot SDK 规划中（M1+逐步补齐）：`ConciergeClient.Auth` 全流程 + token 安全存储 + 自动 refresh。
 - API 契约：`docs/api/auth.md` 冻结。
 
 **验收**
@@ -22,7 +22,7 @@
 
 - gateway：`announcements`（对接 herald/croupier message 的玩家侧投影）、`support`（工单提交/查询、FAQ 检索，对接 croupier）。
 - WebSocket 推送通道（公告与工单回复），复用 chirp 会话。
-- Unity SDK 两个模块 + Cocos SDK 起步（Auth + Announcements）。
+- Unity + Cocos + 微信小程序 SDK 两模块；Layabox/Godot SDK 跟进（Auth + Announcements）。
 
 **验收**
 
